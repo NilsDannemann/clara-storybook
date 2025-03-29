@@ -14,12 +14,29 @@
             align-items: flex-end;
             min-height: 100vh;
             background: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .background-image {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 1000px;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: opacity 0.5s ease-in-out;
+            z-index: -1;
         }
         .swiper {
             max-width: 1000px;
             padding-top: 50px;
             padding-bottom: 50px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
         .swiper-slide {
             background-position: center;
@@ -62,6 +79,7 @@
     </style>
 </head>
 <body>
+    <div class="background-image" style="background-image: url('images/placeholder-1.jpg')"></div>
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -116,6 +134,13 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            on: {
+                slideChangeTransitionEnd: function() {
+                    const currentIndex = this.activeIndex;
+                    const backgroundImage = document.querySelector('.background-image');
+                    backgroundImage.style.backgroundImage = `url('images/placeholder-${currentIndex + 1}.jpg')`;
+                }
+            }
         });
     </script>
 </body>
