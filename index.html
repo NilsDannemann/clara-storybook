@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Stack Swiper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body {
@@ -16,6 +19,7 @@
             background: #f0f0f0;
             position: relative;
             overflow: hidden;
+            font-family: 'Roboto', sans-serif;
         }
         .background-image {
             position: absolute;
@@ -51,22 +55,26 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             background: white;
             border-radius: 20px;
-            padding: 20px;
+            padding: 30px;
             box-sizing: border-box;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        .card-content::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
         }
         .card-number {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
         }
         .card-text {
-            text-align: center;
+            text-align: left;
             font-size: 16px;
             color: #666;
+            line-height: 1.6;
         }
         .swiper-3d .swiper-slide-shadow-left {
             background-image: linear-gradient(to left, rgb(240 240 240), rgba(0, 0, 0, 0));
@@ -84,32 +92,72 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="card-content">
-                    <div class="card-number">1</div>
-                    <div class="card-text">First Card</div>
+                    <div class="card-number">Chapter 1</div>
+                    <div class="card-text">
+                        <p>I knock on the door. No answer.</p>
+                        <p>"Can I come in?" I ask shyly.</p>
+                        <p>"Yes, what is it?" he responds, taking his headphones down.</p>
+                        <p>"I... ehm..." now I feel silly, I stand on one foot, then the other, unsure how to formulate <em>I just want to be in the same room as you</em> in a way that doesn't seem weird. After all, we haven't known each other for long.</p>
+                        <p>"Ivy, what do you want?" he asks again, impatience showing in his tone.</p>
+                        <p>I bite my lip and look down "sorry, nothing." I say hastily, and start closing the door.</p>
+                        <p>"Wait." he calls calmly. I stop my movement and look to him hesitantly. His eyes are on me.</p>
+                        <p>"What did you want to tell me, Ivy?" This time his tone is softer, gentle.</p>
+                        <p>"I... do you have baking soda? I want to make cookies." I say hastily, looking down again as the lie passes my lips.</p>
+                        <p>He clears his throat and I hear his chair moving back.</p>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="card-content">
-                    <div class="card-number">2</div>
-                    <div class="card-text">Second Card</div>
+                    <div class="card-number">Chapter 2</div>
+                    <div class="card-text">
+                        <p>James walks over to me in a few steps. I am looking at his feet, clawed in black socks, and the bottom of his jeans. His scent is distracting me from the situation. His closeness is unsettling, even though there is still room between us.</p>
+                        <p>"Ivy," he says, his tone stern. "I don't appreciate being lied to."</p>
+                        <p>I let out a small gasp. "How do you know I lied?" I say, a little outraged, and look up at him. His jaw is clenched but his eyes still look caring.</p>
+                        <p>"What did you want to tell me? You don't have to tell me, but I would like to know. What I definitely don't want is being lied to. Understood?"</p>
+                        <p>I swallow the <em>yes Sir</em> that wants to escape my lips and just nod.</p>
+                        <p>"I..." I start again. Taking a deep breath I just blurt "I want to be in your room. You can do whatever you were doing now and I won't make a noise. Just, can I be here? Please?" That last part comes out in a whine and I cringe.</p>
+                        <p>"Sorry," I say, mortified to have just admitted I randomly want to be in his room while he works, "I'll just go away now."</p>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="card-content">
-                    <div class="card-number">3</div>
-                    <div class="card-text">Third Card</div>
+                    <div class="card-number">Chapter 3</div>
+                    <div class="card-text">
+                        <p>I turn around and take a step.</p>
+                        <p>"Do I get to respond?" he asks, amused.</p>
+                        <p>I freeze in place. "I... no?" is my answer, my back still turned away from him.</p>
+                        <p>"Oh, too bad," I hear him say casually, "I would have loved to have you in my room, quiet, on that rug over there." I automatically turn back towards him to look at which rug he is talking about.</p>
+                        <p>His finger is pointing to the grey mat by his couch.</p>
+                        <p>"But since you want to go now..." he trails, eyes sparkling.</p>
+                        <p>"No!" I call, and James chuckles. I pout at him and cross my arms.</p>
+                        <p>"You're not funny!"</p>
+                        <p>James just continues to grin.</p>
+                        <p>"Is there something you want to ask me, Ivy?" he asks, giving me another chance.</p>
+                        <p>I sigh, frustrated at him. He already knows what I want, why do I have to repeat myself!</p>
+                        <p>That's exactly what I tell him. "You already know!"</p>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="card-content">
-                    <div class="card-number">4</div>
-                    <div class="card-text">Fourth Card</div>
+                    <div class="card-number">Chapter 4</div>
+                    <div class="card-text">
+                        <p>"I want you to ask me. And to not run away right after saying it," he informs me calmly.</p>
+                        <p>I give him what I hope to be a death stare but instead of dropping it, he lifts a brow.</p>
+                        <p>"Can I be in your room please?" I mumble as incoherently as possible.</p>
+                        <p>"Louder please," his tone is stern. I bite my lip. And repeat myself, this time clearly.</p>
+                        <p>"That wasn't so difficult now, was it?"</p>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="card-content">
-                    <div class="card-number">5</div>
-                    <div class="card-text">Fifth Card</div>
+                    <div class="card-number">Chapter 5</div>
+                    <div class="card-text">
+                        <p>To be continued...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,14 +181,22 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-            },
-            on: {
-                slideChangeTransitionEnd: function() {
-                    const currentIndex = this.activeIndex;
-                    const backgroundImage = document.querySelector('.background-image');
-                    backgroundImage.style.backgroundImage = `url('images/placeholder-${currentIndex + 1}.jpg')`;
-                }
             }
+        });
+
+        // Handle scroll-based image transitions
+        document.querySelectorAll('.card-content').forEach(card => {
+            card.addEventListener('scroll', function() {
+                const scrollPosition = this.scrollTop;
+                const scrollHeight = this.scrollHeight - this.clientHeight;
+                
+                // Show image when scrolled to bottom
+                if (scrollPosition >= scrollHeight - 50) { // 50px threshold
+                    const cardNumber = this.querySelector('.card-number').textContent;
+                    const backgroundImage = document.querySelector('.background-image');
+                    backgroundImage.style.backgroundImage = `url('images/placeholder-${cardNumber}.jpg')`;
+                }
+            });
         });
     </script>
 </body>
