@@ -23,11 +23,11 @@
         }
         .background-image {
             position: absolute;
-            top: 10%;
+            top: 5%;
             left: 50%;
             transform: translate(-50%, 0%);
             width: 1000px;
-            height: 500px;
+            height: 425px;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -67,7 +67,7 @@
             display: none; /* Chrome, Safari and Opera */
         }
         .card-number {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
         }
         .card-text {
@@ -192,9 +192,10 @@
                 
                 // Show image when scrolled to bottom
                 if (scrollPosition >= scrollHeight - 50) { // 50px threshold
-                    const cardNumber = this.querySelector('.card-number').textContent;
+                    const chapterText = this.querySelector('.card-number').textContent;
+                    const chapterNumber = chapterText.replace('Chapter ', '');
                     const backgroundImage = document.querySelector('.background-image');
-                    backgroundImage.style.backgroundImage = `url('images/placeholder-${cardNumber}.jpg')`;
+                    backgroundImage.style.backgroundImage = `url('images/placeholder-${chapterNumber}.jpg')`;
                 }
             });
         });
